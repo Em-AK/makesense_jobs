@@ -8,4 +8,4 @@
           = link_to job.title, job_path(job)
           %i= "in #{job.city}"
         %p.large-2.columns.text-right
-          = job.updated_at.strftime('%b %d').upcase
+          = job.created_at.strftime('%b %d').upcase

@@ -1,6 +1,10 @@
 .row
   .large-7.small-centered.columns
     %h1= @job.title
+    %h4
+      %small
+        POSTED
+        = @job.created_at.strftime('%b %d').upcase
     %strong= @job.company.name
     %p= @job.city
     %a{ href: @job.company.website }= @job.company.website
@@ -8,5 +12,5 @@
 
     %p= @job.description
     .panel.radius
-      %h3= "apply for this job".upcase
+      %h4= "apply for this job".upcase
       %p= @job.apply
