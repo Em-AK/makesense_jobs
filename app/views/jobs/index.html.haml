@@ -1,0 +1,11 @@
+%h1.text-center We want Jobs that MakeSense !
+.row
+  .large-7.small-centered.columns
+    - @jobs.each do |job|
+      .row
+        %p.large-10.columns
+          %b= job.company.name.upcase 
+          = link_to job.title, job_path(job)
+          %i= "in #{job.city}"
+        %p.large-2.columns.text-right
+          = job.updated_at.strftime('%b %d').upcase

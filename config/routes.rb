@@ -4,6 +4,7 @@ Makesensejobs::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#home'
+  resources :jobs
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,12 @@
+.row
+  .large-7.small-centered.columns
+    %h1= @job.title
+    %strong= @job.company.name
+    %p= @job.city
+    %a{ href: @job.company.website }= @job.company.website
+    %hr
+
+    %p= @job.description
+    .panel.radius
+      %h3= "apply for this job".upcase
+      %p= @job.apply
