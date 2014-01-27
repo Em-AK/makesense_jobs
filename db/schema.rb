@@ -13,24 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20140126153300) do
 
-  create_table "companies", force: true do |t|
-    t.string   "name"
-    t.string   "website"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "jobs", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.text     "apply"
-    t.string   "city"
-    t.integer  "company_id"
+    t.string   "location"
+    t.string   "company_name"
+    t.string   "company_url"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "jobs", ["company_id"], name: "index_jobs_on_company_id"
 
 end

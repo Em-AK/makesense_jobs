@@ -4,8 +4,10 @@ class CreateJobs < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.text :apply
-      t.string :city
-      t.references :company, index: true
+      t.string :location
+      t.string :company_name
+      t.string :company_url
+      t.string :email
 
       t.timestamps
     end

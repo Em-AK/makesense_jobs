@@ -1,0 +1,49 @@
+= form_for(@job) do |f|
+  
+  %hr
+  %h3 Tell us about the position
+  .row
+    .large-2.columns
+      = f.label :title, "Job title", class: "inline show-for-large-up"
+      = f.label :title, "Job title", class: "hide-for-large-up"
+    .large-8.columns.left
+      = f.text_field :title, placeholder: "\"Community Developper\" or \"UX Designer\""
+  .row
+    .large-2.columns
+      = f.label :location, "Location", class: "inline show-for-large-up"
+      = f.label :location, "Location", class: "hide-for-large-up"
+    .large-8.columns.left
+      = f.text_field :location, placeholder: "\"Lille, France\" or \"London, UK\""
+  .row
+    .large-12.columns
+      = f.label :description, "Job description"
+      = f.text_area :description, placeholder: "Try to avoid meaningless buzzwords. We prefer words that makesense."
+  .row
+    .large-12.columns
+      = f.label :apply, "How to apply for this job?"
+      = f.text_area :apply, placeholder: "Ex. Send an email with links to your work and projects at dude@makesense.org"
+  
+  %hr
+  %h3 Tell us about your company / organisation
+  .row
+    .large-2.columns
+      = f.label :company_name, "Name", class: "inline show-for-large-up"
+      = f.label :company_name, "Name", class: "hide-for-large-up"
+    .large-8.columns.left
+      = f.text_field :company_name, placeholder: "Your company or organisation's name"
+  .row
+    .large-2.columns
+      = f.label :company_url, "Website", class: "inline show-for-large-up"
+      = f.label :company_url, "Website", class: "hide-for-large-up"
+    .large-8.columns.left
+      = f.text_field :company_url, placeholder: "Ex. http://we.makesense.org"
+  .row
+    .large-2.columns
+      = f.label :email, class: "inline show-for-large-up"
+      = f.label :email, class: "hide-for-large-up"
+    .large-8.columns.left
+      = f.text_field :email
+      %p This is where we'll send your confirmation email
+
+
+  = f.submit value: "Preview your ad", class: "button"

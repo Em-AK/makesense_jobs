@@ -3,8 +3,14 @@ Makesensejobs::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'pages#home'
+  root 'jobs#index'
   resources :jobs
+
+# route to jobs#edit
+#   https://weworkremotely.com/listings/new?token=BAhpAvAD--54196a900952d5e2bc22def99f5b3b75ca74b785
+
+# route to jobs#purchase
+# https://weworkremotely.com/listings/new/purchase?token=BAhpAvAD--54196a900952d5e2bc22def99f5b3b75ca74b785
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
