@@ -1,12 +1,13 @@
 = render 'header'
 %h1.text-center We want Jobs that MakeSense !
 .row
-  .large-7.small-centered.columns
+  .large-8.small-centered.columns
     - @jobs.each do |job|
       .row
-        %p.large-10.columns
+        %p.small-10.columns
           %b= job.company_name.upcase 
           = link_to job.title, job_path(job)
           %i= "in #{job.location}"
-        %p.large-2.columns.text-right
+        %p.small-2.columns.text-right
           = job.created_at.strftime('%b %d').upcase
+        %hr
