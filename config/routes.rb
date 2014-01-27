@@ -4,7 +4,14 @@ Makesensejobs::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'jobs#index'
-  resources :jobs
+  # jobs routes
+  get 'jobs' => 'jobs#index', as: :jobs
+  get 'jobs/new' => 'jobs#new', as: :new_job
+  get 'jobs/new/preview' => 'jobs#preview', as: :preview_job
+  get 'jobs/:id' => 'jobs#show', as: :job
+  post 'jobs' => 'jobs#create'
+
+
 
 # route to jobs#edit
 #   https://weworkremotely.com/listings/new?token=BAhpAvAD--54196a900952d5e2bc22def99f5b3b75ca74b785

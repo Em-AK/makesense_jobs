@@ -1,0 +1,9 @@
+%h2.text-center Step 2/3 : Preview your ad
+%hr
+= render 'show'
+.row
+  .large-8.small-centered.columns
+    = form_for(@job) do |f|
+      = f.submit value: "Looks awesome! Go to Step 3", class: "button radius"
+    or
+    = link_to "Make changes"

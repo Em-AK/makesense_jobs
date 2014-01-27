@@ -1,6 +1,5 @@
 = form_for(@job) do |f|
-  
-  %hr
+
   %h3 Tell us about the position
   .row
     .large-2.columns
@@ -43,7 +42,7 @@
       = f.label :email, class: "hide-for-large-up"
     .large-8.columns.left
       = f.text_field :email
-      %p This is where we'll send your confirmation email
+      %p This is where we'll send your confirmation email before publishing your ad.
 
 
   = f.submit value: "Preview your ad", class: "button radius"

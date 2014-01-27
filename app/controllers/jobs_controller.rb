@@ -11,14 +11,24 @@ class JobsController < ApplicationController
 
   def new
     @job = Job.new
+    session[:job_id] = nil
   end
 
   def create
     @job = Job.new(job_params)
     if @job.save
-      redirect_to @job, notice: "Your job ad is now online !"
+      session[:job_id] = @job.id
+      redirect_to preview_job_path
     else
       render action: 'new'
+    end
+  end
+
+  def preview
+    if session[:job_id]
+      @job = Job.find(session[:job_id])
+    else
+      redirect_to new_job_path
     end
   end
 

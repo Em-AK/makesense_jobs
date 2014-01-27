@@ -1,17 +1,2 @@
 = render 'header'
-.row
-  .large-8.small-centered.columns
-    %h1= @job.title
-    %h4
-      %small
-        POSTED
-        = @job.created_at.strftime('%b %d').upcase
-    %strong= @job.company_name
-    %p= @job.location
-    %a{ href: @job.company_url }= @job.company_url
-    %hr
-
-    %p= @job.description
-    .panel.radius
-      %h4= "apply for this job".upcase
-      %p= @job.apply
+= render 'show'
