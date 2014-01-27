@@ -22,6 +22,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'foundation-rails'
 gem 'haml'
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
 group :doc do
   gem 'sdoc', require: false
