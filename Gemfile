@@ -26,6 +26,7 @@ gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'carrierwave'
 gem 'mini_magick'
 gem "fog", "~> 1.3.1"
+gem 'actionview-encoded_mail_to'
 
 group :doc do
   gem 'sdoc', require: false

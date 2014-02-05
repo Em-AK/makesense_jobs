@@ -16,7 +16,9 @@
 @import "foundation_and_overrides";
 
 .logo {
-  width: 140px;
+  width: 200px;
+  margin-bottom: 1.8rem;
+  margin-top: .4rem;
 }
 .bar {
   padding: 20px 5px 0;
@@ -24,5 +26,22 @@
     font-size: 250%;
     font-weight: 800;
     font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  }
+}
+.footer {
+  background-color: #666666;
+  min-height: 250px;
+  padding: 1.8rem 0;
+  margin-top: 2rem;
+  p {
+    font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-size: 110%;
+  }
+  a {
+    font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    color: #DEDEDE;
+    &:hover {
+      color: #FAFAFA;
+    }
   }
 }
