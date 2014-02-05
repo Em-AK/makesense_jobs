@@ -3,7 +3,6 @@
 = render 'show'
 .row
   .large-8.small-centered.columns
-    = form_for(@job) do |f|
-      = f.submit value: "Looks awesome! Go to Step 3", class: "button radius"
+    = link_to "Looks awesome! Go to Step 3", publish_job_path(token: @job.token), class: "button radius"
     or
-    = link_to "Make changes"
+    = link_to "Make changes", new_job_path(token: @job.token)

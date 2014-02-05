@@ -1,5 +1,8 @@
-= form_for(@job) do |f|
+- extra_params = {}
+- extra_params = { url: new_job_path( token: @job.token ), html: {method: "patch"} } if @job.id
 
+
+= form_for(@job, extra_params) do |f|
   %h3 Tell us about the position
   .row
     .large-2.columns
@@ -21,7 +24,7 @@
     .large-12.columns
       = f.label :apply, "How to apply for this job?"
       = f.text_area :apply, placeholder: "Ex. Send an email with links to your work and projects at dude@makesense.org"
-  
+
   %hr
   %h3 Tell us about your company / organisation
   .row
@@ -43,6 +46,5 @@
     .large-8.columns.left
       = f.text_field :email
       %p This is where we'll send your confirmation email before publishing your ad.
-
-
+    
   = f.submit value: "Preview your ad", class: "button radius"
