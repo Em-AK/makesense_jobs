@@ -2,6 +2,7 @@
 %h2.text-center Say no to bullshit jobs!
 .row
   .large-10.small-centered.columns
+    - @jobs.sort!{ |a,b| b.created_at <=> a.created_at }
     - @jobs.each do |job|
       .row
         %p.small-10.columns
