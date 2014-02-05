@@ -4,10 +4,11 @@
     %h4
       %small
         POSTED
-        = @job.created_at.strftime('%b %d').upcase
+        = @job.created_at.strftime('%B %d').upcase
+    = image_tag @job.logo_url, class: 'right' if @job.logo?
     %strong= @job.company_name
     %p= @job.location
-    %a{ href: @job.company_url }= @job.company_url
+    = link_to @job.company_url, @job.company_url
     %hr
 
     %p= @job.description

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204183114) do
+ActiveRecord::Schema.define(version: 20140205093243) do
 
   create_table "jobs", force: true do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140204183114) do
     t.datetime "updated_at"
     t.string   "token"
     t.boolean  "published"
+    t.string   "logo"
   end
 
   add_index "jobs", ["published"], name: "index_jobs_on_published"

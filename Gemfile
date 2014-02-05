@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'foundation-rails'
 gem 'haml'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+gem 'carrierwave'
 
 group :doc do
   gem 'sdoc', require: false

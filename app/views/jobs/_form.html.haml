@@ -23,7 +23,7 @@
   .row
     .large-12.columns
       = f.label :apply, "How to apply for this job?"
-      = f.text_area :apply, placeholder: "Ex. Send an email with links to your work and projects at dude@makesense.org"
+      = f.text_area :apply, placeholder: "Ex. Send an email with links to your work and projects at the.dude@makesense.org"
 
   %hr
   %h3 Tell us about your company / organisation
@@ -41,10 +41,17 @@
       = f.text_field :company_url, placeholder: "Ex. http://we.makesense.org"
   .row
     .large-2.columns
+      = f.label :logo, class: "inline show-for-large-up"
+      = f.label :logo, class: "hide-for-large-up"
+    .large-8.columns.left
+      = image_tag(@job.logo_url) if @job.logo?
+      = f.file_field :logo
+  .row
+    .large-2.columns
       = f.label :email, class: "inline show-for-large-up"
       = f.label :email, class: "hide-for-large-up"
     .large-8.columns.left
-      = f.text_field :email
-      %p This is where we'll send your confirmation email before publishing your ad.
+      = f.text_field :email, placeholder: "Your email"
+      %p Your email will be kept private. We will send you a confirmation email before you can publish your ad.
     
-  = f.submit value: "Preview your ad", class: "button radius"
+  = f.submit value: "Preview your ad", class: "button radius right"

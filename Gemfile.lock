@@ -43,6 +43,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.9.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
     childprocess (0.4.0)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
@@ -170,6 +174,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-session_store!
   capybara (= 2.1.0)
+  carrierwave
   coffee-rails (~> 4.0.1)
   foundation-rails
   haml
