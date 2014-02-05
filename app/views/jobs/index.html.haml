@@ -5,9 +5,11 @@
     - @jobs.each do |job|
       .row
         %p.small-10.columns
-          %b= job.company_name.upcase 
+          %strong= job.company_name.upcase 
           = link_to job.title, job_path(job)
-          %i= "in #{job.location}"
+          - unless job.location.empty?
+            in 
+            = "#{job.location}"
         %p.small-2.columns.text-right
           = job.created_at.strftime('%b %d').upcase
         %hr

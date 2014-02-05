@@ -10,3 +10,5 @@
     = form_for(@job, url: new_job_path( token: @job.token ), html: {method: "patch"}) do |f|
       = f.hidden_field :published, value: true
       = f.submit value: "Publish", class: "button radius"
+    or
+    = link_to "Make changes", new_job_path(token: @job.token)

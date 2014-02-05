@@ -1,13 +1,18 @@
 class JobsController < ApplicationController
   
   def index
-    @jobs = Job.all
-    #it should find jobs created less than 42 days ago
+    # display only published jobs
+    published_jobs = Job.where published: true
+
+    # display jobs created less than 42 days ago
+    deadline = Date.today - 42
+    @jobs = []
+    published_jobs.each{ |job| @jobs << job if job.created_at > deadline }
   end
 
   def show
-    @job = Job.find params[:id]
     #it should display job if created less than 42 days ago
+    @job = Job.find params[:id]
   end
 
   def new
