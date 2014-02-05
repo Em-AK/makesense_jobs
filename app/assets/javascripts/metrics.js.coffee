@@ -1,5 +1,5 @@
 $(document).on 'page:change', ->
-  if window._paq?
-    _paq.push ['trackPageview']
-  else if window.piwikTracker?
-    piwikTracker.trackPageview()
+  if window._gaq?
+    _gaq.push ['_trackPageview']
+  else if window.pageTracker?
+    pageTracker._trackPageview()
