@@ -24,6 +24,7 @@ gem 'foundation-rails'
 gem 'haml'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'carrierwave'
+gem "fog", "~> 1.3.1"
 
 group :doc do
   gem 'sdoc', require: false
