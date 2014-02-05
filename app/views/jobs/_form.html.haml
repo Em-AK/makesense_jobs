@@ -44,7 +44,7 @@
       = f.label :logo, class: "inline show-for-large-up"
       = f.label :logo, class: "hide-for-large-up"
     .large-8.columns.left
-      = image_tag(@job.logo_url) if @job.logo?
+      = image_tag(@job.logo_url, class: "th") if @job.logo?
       = f.file_field :logo
   .row
     .large-2.columns
