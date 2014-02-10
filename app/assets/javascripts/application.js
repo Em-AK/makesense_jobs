@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require wysihtml5x-toolbar
+//= require parser_rules/simple
 //= require turbolinks
 //= require_tree .
 
