@@ -7,6 +7,8 @@
       = content_for?(:title) ? yield(:title) : "Jobs that MakeSense"
     = stylesheet_link_tag "application"
     = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "wysihtml5x-toolbar"
+    = javascript_include_tag "parser_rules/simple"
     = csrf_meta_tags
   %body
     = yield

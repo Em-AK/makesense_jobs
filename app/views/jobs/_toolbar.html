@@ -1,0 +1,20 @@
+<div id="wysihtml5-toolbar">
+  <strong>
+    <a data-wysihtml5-command="bold">Bold</a>
+  </strong> | 
+  <em>
+    <a data-wysihtml5-command="italic">Italic</a>
+  </em> | 
+  <a data-wysihtml5-command="insertUnorderedList" title="Insert an unordered list" class="command">Bullets</a> | 
+  <a data-wysihtml5-command="insertOrderedList" title="Insert an ordered list" class="command">Numbers</a>
+  
+  <!-- Some wysihtml5 commands like 'createLink' require extra paramaters specified by the user (eg. href) -->
+  <a data-wysihtml5-command="createLink"></a>
+  <div data-wysihtml5-dialog="createLink" class="wysihtml5-dialog" style="display: none;">
+    <label>
+      Link:
+      <input data-wysihtml5-dialog-field="href" value="http://" class="text">
+    </label>
+    <a data-wysihtml5-dialog-action="save" class='button tiny radius'>OK</a> <a data-wysihtml5-dialog-action="cancel">Cancel</a>
+  </div>
+</div>

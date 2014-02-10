@@ -4,3 +4,26 @@
 .job-logo {
   margin: auto;
 }
+
+#job_description {
+  min-height: 280px;
+}
+
+#job_apply {
+  min-height: 80px;
+}
+
+label {
+  font-weight: 800;
+}
+
+#wysihtml5-toolbar {
+  margin: 20px auto;
+  
+  .wysihtml5-dialog {
+    margin-top: 10px;
+    input {
+      width: 80%;
+    }
+  }
+}

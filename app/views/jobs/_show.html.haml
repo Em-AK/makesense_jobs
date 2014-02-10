@@ -15,7 +15,7 @@
         = image_tag @job.logo_url, class: 'job-logo hide-for-medium-up' if @job.logo?
     %hr
 
-    %p= @job.description
+    %p= @job.description.html_safe
     .panel.radius
       %h4= "apply for this job".upcase
-      %p= @job.apply
+      %p= @job.apply.html_safe

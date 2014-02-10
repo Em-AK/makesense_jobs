@@ -27,6 +27,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem "fog", "~> 1.3.1"
 gem 'actionview-encoded_mail_to'
+gem 'wysihtml5x-rails'
 
 group :doc do
   gem 'sdoc', require: false

@@ -19,6 +19,7 @@
   .row
     .large-12.columns
       = f.label :description, "Job description"
+      = render 'toolbar'
       = f.text_area :description, placeholder: "Try to avoid meaningless buzzwords. We prefer words that makesense."
   .row
     .large-12.columns
