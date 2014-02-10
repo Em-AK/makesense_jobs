@@ -1,6 +1,23 @@
 // Place all the styles related to the jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.job-list {
+  .row {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    .date {
+      color: rgb(120, 120, 120);
+    }
+    p {
+      font-size: 1.16rem;
+      margin: 0px;
+    }
+  }
+  .highlighted {
+    background-color: #CFF3FF;
+  }
+}
+
 .job-logo {
   margin: auto;
 }

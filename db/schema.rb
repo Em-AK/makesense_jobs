@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140205093243) do
+ActiveRecord::Schema.define(version: 20140210121722) do
 
   create_table "jobs", force: true do |t|
     t.string   "title"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140205093243) do
     t.string   "token"
     t.boolean  "published"
     t.string   "logo"
+    t.boolean  "highlighted"
   end
 
   add_index "jobs", ["published"], name: "index_jobs_on_published"
