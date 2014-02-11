@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <strong>[Jobs.MakeSense]</strong>
+    <h1><%= @title %></h1>
+    <strong>Congratulation !</strong>
+    <p>You created a new job that makesense.<br/>
+      You have 42 days left before this ad goes offline.</p>
+    <p>
+      You can edit/publish your job ad at any time here:<br/>
+      <%= @edit_url %><br/>
+      Please note that it won't reset the 42 days period.
+    </p>
+    <p>
+      Share the link below in your network to reach the perfect match for <%= @company %>.<br/>
+      <%= @job_url %>
+    </p>
+    <p>
+      Thank you for creating a job and have a great day!</p>
+    </p>
+    <p>
+      ~ Emilien
+    </p>
+    <a href='http://dev-mksjobs.herokuapp.com'>Jobs.MakeSense</a>
+
+  </body>
+</html>
