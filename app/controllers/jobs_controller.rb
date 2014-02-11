@@ -28,6 +28,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new job_params
     if @job.save
+      PosterMailer.new_job_email(@job).deliver
       session[:job_id] = @job.id
       redirect_to preview_job_path
     else
