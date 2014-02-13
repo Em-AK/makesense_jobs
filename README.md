@@ -7,6 +7,7 @@ by emilien.ak@gmail.com
     * set a 'from:' email
   * **BM** yes/no? ideas? 'reward based' pay as you want
   * **MKS app redirect** UX/UI feedback
+    * integrate a random challenge from the app -> challenge accepted!
   * **branding** 
     * graphic design, improve logo, make something recognizable
   * **features**
