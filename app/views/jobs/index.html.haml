@@ -1,27 +1,27 @@
 = render 'header'
 %h2.text-center Say no to bullshit jobs!
 .row
-  .large-11.small-centered.columns.job-list
+  .large-20.small-centered.columns.job-list
     - @jobs.sort!{ |a,b| b.created_at <=> a.created_at }
     - @jobs.each do |job|
       - if job.highlighted?
         .row.highlighted
-          %p.small-10.columns
+          %p.small-21.columns
             %strong= job.company_name
             = link_to job.title, job_path(job)
             - unless job.location.empty?
               in 
               = "#{job.location}"
-          %p.small-2.columns.text-right.date
+          %p.small-3.columns.text-right.date
             = job.created_at.strftime('%b %d').capitalize
       - else
         .row
-          %p.small-10.columns
+          %p.small-21.columns
             %strong= job.company_name
             = link_to job.title, job_path(job)
             - unless job.location.empty?
               in 
               = "#{job.location}"
-          %p.small-2.columns.text-right.date
+          %p.small-3.columns.text-right.date
             = job.created_at.strftime('%b %d').capitalize
 = render 'footer'

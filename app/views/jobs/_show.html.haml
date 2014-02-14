@@ -1,8 +1,8 @@
 .row
-  .large-8.small-centered.columns
+  .large-16.small-centered.columns
     %h1= @job.title
     .row
-      .medium-6.columns
+      .medium-12.columns
         %h4
           %small
             POSTED
@@ -10,7 +10,7 @@
         %strong= @job.company_name
         %p= @job.location
         = link_to @job.company_url, @job.company_url
-      .medium-6.columns
+      .medium-12.columns
         = image_tag @job.logo_url, class: 'right show-for-medium-up' if @job.logo?
         = image_tag @job.logo_url, class: 'job-logo hide-for-medium-up' if @job.logo?
     %hr

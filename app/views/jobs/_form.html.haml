@@ -5,53 +5,53 @@
 = form_for(@job, extra_params) do |f|
   %h3 Tell us about the position
   .row
-    .large-2.columns
+    .large-4.columns
       = f.label :title, "Job title", class: "inline show-for-large-up"
       = f.label :title, "Job title", class: "hide-for-large-up"
-    .large-8.columns.left
+    .large-16.columns.left
       = f.text_field :title, placeholder: "\"Community Developper\" or \"UX Designer\""
   .row
-    .large-2.columns
+    .large-4.columns
       = f.label :location, "Location", class: "inline show-for-large-up"
       = f.label :location, "Location", class: "hide-for-large-up"
-    .large-8.columns.left
+    .large-16.columns.left
       = f.text_field :location, placeholder: "\"Lille, France\" or \"London, UK\""
   .row
-    .large-12.columns
+    .large-24.columns
       = f.label :description, "Job description"
       = render 'toolbar'
       = f.text_area :description, placeholder: "Try to avoid meaningless buzzwords. We prefer words that makesense."
   .row
-    .large-12.columns
+    .large-24.columns
       = f.label :apply, "How to apply for this job?"
       = f.text_area :apply, placeholder: "Ex. Send an email with links to your work and projects at the.dude@makesense.org"
 
   %hr
   %h3 Tell us about your company / organisation
   .row
-    .large-2.columns
+    .large-4.columns
       = f.label :company_name, "Name", class: "inline show-for-large-up"
       = f.label :company_name, "Name", class: "hide-for-large-up"
-    .large-8.columns.left
+    .large-16.columns.left
       = f.text_field :company_name, placeholder: "Your company or organisation's name"
   .row
-    .large-2.columns
+    .large-4.columns
       = f.label :company_url, "Website", class: "inline show-for-large-up"
       = f.label :company_url, "Website", class: "hide-for-large-up"
-    .large-8.columns.left
+    .large-16.columns.left
       = f.text_field :company_url, placeholder: "Ex. http://we.makesense.org"
   .row
-    .large-2.columns
+    .large-4.columns
       = f.label :logo, class: "inline show-for-large-up"
       = f.label :logo, class: "hide-for-large-up"
-    .large-8.columns.left
+    .large-16.columns.left
       = image_tag(@job.logo_url, class: "th") if @job.logo?
       = f.file_field :logo
   .row
-    .large-2.columns
+    .large-4.columns
       = f.label :email, class: "inline show-for-large-up"
       = f.label :email, class: "hide-for-large-up"
-    .large-8.columns.left
+    .large-16.columns.left
       = f.text_field :email, placeholder: "Your email"
       %p Your email will be kept private. We will send you a confirmation email before you can publish your ad.
     

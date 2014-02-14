@@ -1,15 +1,15 @@
 .footer
   .row
-    .medium-4.columns.medium-offset-2.text-right
+    .medium-8.columns.medium-offset-4.text-right
       %h4 No job for you today?
       %p
         Sharpen your skills by solving real world challenges on 
         %a{ href: "http://makesense.org"} makesense.org
-    .medium-6.columns.left
+    .medium-12.columns.left
       %a{ href: "http://makesense.org" }
         %img.logo{ src: "/makesense_jobs.png", class: "th radius"}
   .row
-    .medium-3.columns.medium-centered.text-center
+    .medium-6.columns.medium-centered.text-center
       = link_to "Challenge accepted!", "http://makesense.org", class: 'button radius success'
       %hr
       = mail_to "emilien.ak@gmail.com", "Contact / Feedback", encode: "hex", subject: "[Jobs that MakeSense] 'Your subject'", class: 'contact'
