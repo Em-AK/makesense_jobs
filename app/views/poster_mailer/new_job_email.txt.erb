@@ -1,16 +1,21 @@
-[Jobs.MakeSense]
-<%= @title %>
-================================
-
 Congratulation !
 
 You created a new job that makesense.
-You have 42 days left before this ad goes offline.
+This job will self-destruct from our platform in 42 days. Your mission, should you decide to accept it, is to gather the best candidates to fulfill the mission.
+Good luck.
 
-You can edit/publish your job ad at any time here:
-(Please note that it won't reset the 42 days period)
+[Jobs.MakeSense]
+<%= @title %>
+
+1. Edit your ad
+===============
+You can edit or publish your job ad at any time with the secret link below.
+Don't share this secret link with untrusted people! (or bad things will happen to your karma)
+Please note that editing your ad won't reset the 42 days period.
 <%= @edit_url %>
 
+2. Promote your ad
+==================
 <%= @company.empty? ? "Are you" : "#{@company.capitalize} is" %> looking for the perfect match?
 Then share this link in your network to reach him/her.
 <%= @job_url %>
