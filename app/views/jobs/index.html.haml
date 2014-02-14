@@ -1,7 +1,7 @@
 = render 'header'
 %h2.text-center Say no to bullshit jobs!
 .row
-  .large-20.small-centered.columns.job-list
+  .large-22.small-centered.columns.job-list
     - @jobs.sort!{ |a,b| b.created_at <=> a.created_at }
     - @jobs.each do |job|
       - if job.highlighted?
