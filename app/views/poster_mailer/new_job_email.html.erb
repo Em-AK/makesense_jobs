@@ -15,7 +15,7 @@
       <%= @edit_url %><br/>
     </p>
     <p>
-      <%= @company %> is looking for the perfect match?
+      <%= if @company ? "#{@company} is" : "You are" %> looking for the perfect match?
       Share the link to your ad in your network to reach him/her.<br/>
       <%= @job_url %>
     </p>
