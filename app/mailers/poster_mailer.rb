@@ -8,6 +8,6 @@ class PosterMailer < ActionMailer::Base
     @edit_url = new_job_url(token: job.token, host: "http://dev-mksjobs.herokuapp.com/")
     @company = job.company_name
 
-    mail(to: @recruiter, subject: '[Jobs.MakeSense] ' + job.title)
+    mail(to: @recruiter, subject: "[Jobs.MakeSense] #{job.title}")
   end
 end
