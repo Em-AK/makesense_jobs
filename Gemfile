@@ -28,6 +28,7 @@ gem 'mini_magick'
 gem "fog", "~> 1.3.1"
 gem 'actionview-encoded_mail_to'
 gem 'wysihtml5x-rails'
+gem 'newrelic_rpm'
 
 group :doc do
   gem 'sdoc', require: false

@@ -101,6 +101,7 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.8.0)
+    newrelic_rpm (3.7.2.192)
     nokogiri (1.5.11)
     pg (0.15.1)
     polyglot (0.3.3)
@@ -204,6 +205,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mini_magick
+  newrelic_rpm
   pg (= 0.15.1)
   pry
   rails (= 4.0.2)
