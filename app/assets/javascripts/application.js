@@ -16,6 +16,5 @@
 //= require wysihtml5x-toolbar
 //= require parser_rules/simple
 //= require turbolinks
-//= require_tree .
 
 $(function(){ $(document).foundation(); });

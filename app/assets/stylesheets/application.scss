@@ -9,11 +9,9 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require foundation_and_overrides
- *= require wysihtml5x
- *= require_tree .
  */
 @import "foundation_and_overrides";
+@import "jobs";
 
 .logo {
   width: 200px;

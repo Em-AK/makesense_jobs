@@ -18,6 +18,7 @@ gem "fog", "~> 1.3.1"
 gem 'actionview-encoded_mail_to'
 gem 'wysihtml5x-rails'
 gem 'newrelic_rpm'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

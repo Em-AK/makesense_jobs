@@ -1,4 +1,6 @@
 Makesensejobs::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -12,12 +14,6 @@ Makesensejobs::Application.routes.draw do
   get 'jobs/:id' => 'jobs#show', as: :job
   post 'jobs' => 'jobs#create'
   patch 'jobs/new' => 'jobs#update'
-
-# route to jobs#edit
-#   https://weworkremotely.com/listings/new?token=BAhpAvAD--54196a900952d5e2bc22def99f5b3b75ca74b785
-
-# route to jobs#purchase
-# https://weworkremotely.com/listings/new/purchase?token=BAhpAvAD--54196a900952d5e2bc22def99f5b3b75ca74b785
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
