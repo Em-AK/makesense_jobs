@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: d7a26247de866fba5e3d2cce872ba978247f80a2
+  revision: 1930da57a656dfe82607c2985855ba17813c6c29
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -59,7 +59,9 @@ GEM
     arel (4.0.2)
     atomic (1.1.14)
     awesome_print (1.2.0)
-    bcrypt-ruby (3.1.2)
+    bcrypt (3.1.7)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bourbon (3.1.8)
@@ -94,8 +96,8 @@ GEM
       debugger-linecache (~> 1.2.0)
       debugger-ruby_core_source (~> 1.3.1)
     debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.3.1)
-    devise (3.2.2)
+    debugger-ruby_core_source (1.3.2)
+    devise (3.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -261,7 +263,7 @@ GEM
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
     slop (3.4.7)
-    sprockets (2.10.1)
+    sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
