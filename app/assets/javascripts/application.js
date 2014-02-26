@@ -12,9 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
-//= require wysihtml5x-toolbar
-//= require parser_rules/simple
+//= require foundation/foundation
+//= require foundation/foundation.alert
 //= require turbolinks
 
 $(function(){ $(document).foundation(); });
