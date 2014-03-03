@@ -9,7 +9,7 @@
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "metrics"
-    = javascript_include_tag "wysihtml5x"
+    = javascript_include_tag "editor" if action_name == "new"
     = csrf_meta_tags
   %body
     = yield
