@@ -6,11 +6,12 @@
     %meta{ name: "description", content: "Jobs that MakeSense is the best place to find and list jobs that do not meet the requirements of bullshit jobs." }
     %title
       = content_for?(:title) ? yield(:title) : "Jobs that MakeSense"
-    = stylesheet_link_tag "application"
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "vendor/modernizr"
-    = javascript_include_tag "wysihtml5x" if action_name == "new"
+    = javascript_include_tag "metrics"
+    = javascript_include_tag "wysihtml5x"
     = csrf_meta_tags
   %body
     = yield
     = render 'layouts/metrics'
-    = javascript_include_tag "application"
+    = javascript_include_tag "application", "data-turbolinks-track" => true
