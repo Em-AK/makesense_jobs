@@ -1,7 +1,13 @@
 - extra_params = {}
 - extra_params = { url: new_job_path( token: @job.token ), html: {method: "patch"} } if @job.id
 
-
+.row
+  %p.panel.radius.callout.large-24.columns
+    To save your work in progress, you can fill your 
+    %strong email 
+    and push the 
+    %strong Preview
+    button.
 = form_for(@job, extra_params) do |f|
   %h3 Tell us about the position
   .row
@@ -10,6 +16,8 @@
       = f.label :title, "Job title", class: "hide-for-large-up"
     .large-16.columns.left
       = f.text_field :title, placeholder: "\"Community Developper\" or \"UX Designer\""
+      %p.panel.radius.callout
+        No need to specify the name of your company in the job title. Our app will take care of it !
   .row
     .large-4.columns
       = f.label :location, "Location", class: "inline show-for-large-up"
@@ -20,11 +28,11 @@
     .large-24.columns
       = f.label :description, "Job description"
       = render 'toolbar'
-      = f.text_area :description, placeholder: "Try to avoid meaningless buzzwords. We prefer words that makesense."
+      = f.text_area :description, placeholder: "Please consider avoiding meaningless buzzwords and prefer words that makesense."
   .row
     .large-24.columns
       = f.label :apply, "How to apply for this job?"
-      = f.text_area :apply, placeholder: "Ex. Send an email with links to your work and projects at the.dude@makesense.org"
+      = f.text_area :apply, placeholder: "Keep it short! Ex. \"Send an email with links to your work and projects at the.dude@makesense.org\""
 
   %hr
   %h3 Tell us about your company / organisation
@@ -53,6 +61,6 @@
       = f.label :email, class: "hide-for-large-up"
     .large-16.columns.left
       = f.text_field :email, placeholder: "Your email"
-      %p Your email will be kept private. You will receive an email with the link to edit your ad.
+      %p.panel.radius.callout Your email will be kept private. You will receive a message with a link to edit your ad.
     
   = f.submit value: "Preview your ad", class: "button radius"
