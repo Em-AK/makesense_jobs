@@ -1,6 +1,8 @@
 // Place all the styles related to the jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Apply to the INDEX
 .job-list {
   .row {
     padding: 0.5rem 0;
@@ -18,6 +20,74 @@
   }
 }
 
+.logo {
+  width: 200px;
+  margin-bottom: 1.8rem;
+  margin-top: .4rem;
+}
+.bar {
+  padding: 20px 5px 0;
+  .root {
+    font-size: 250%;
+    font-weight: 400;
+    font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  }
+}
+.tagline {
+  font-weight: 300;
+}
+.footer {
+  background-color: #666666;
+  min-height: 250px;
+  padding: 1.8rem 0;
+  margin-top: 2rem;
+  color: #DEDEDE;
+  h4 {
+    color: #DEDEDE;
+    font-weight: 800;
+  }
+  p {
+    font-size: 110%;
+  }
+  a {
+    color: #DEDEDE;
+    &:hover {
+      color: #FAFAFA;
+    }
+  }
+}
+
+// Job Show
+.catchy {
+  font-weight: 800;
+}
+.company * {
+  margin-bottom: 0;
+  h3 {
+    font-weight: 800;
+  }
+}
+
+.job-logo-small {
+  margin: auto;
+}
+
+.job-logo {
+  margin-top: 1.5rem;
+}
+
+.job-offer {
+  line-height: 1.6;
+  margin-bottom: rem-calc(20);
+  p {
+    margin-top: rem-calc(10);
+  }
+  li {
+    margin-left: rem-calc(30);
+  }
+}
+
+// Apply to the FORM
 #job_description {
   min-height: 280px;
 }

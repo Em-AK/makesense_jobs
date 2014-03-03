@@ -20,63 +20,8 @@
 @import "foundation/components/thumbs";
 @import "foundation/components/alert-boxes";
 @import "jobs";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300);
+
 // @import "foundation/components/labels";
 // @import "foundation/components/sub-nav";
-
-.logo {
-  width: 200px;
-  margin-bottom: 1.8rem;
-  margin-top: .4rem;
-}
-.bar {
-  padding: 20px 5px 0;
-  .root {
-    font-size: 250%;
-    font-weight: 800;
-    font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-  }
-}
-.footer {
-  background-color: #666666;
-  min-height: 250px;
-  padding: 1.8rem 0;
-  margin-top: 2rem;
-  p {
-    font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-    font-size: 110%;
-  }
-  a {
-    font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-    color: #DEDEDE;
-    &:hover {
-      color: #FAFAFA;
-    }
-  }
-}
-
-// Job Show
-.company * {
-  margin-bottom: 0;
-  h3 {
-    font-weight: 800;
-  }
-}
-
-.job-logo-small {
-  margin: auto;
-}
-
-.job-logo {
-  margin-top: 1.5rem;
-}
-
-.job-offer {
-  line-height: $paragraph-line-height;
-  margin-bottom: rem-calc(20);
-  p {
-    margin-top: rem-calc(10);
-  }
-  li {
-    margin-left: rem-calc(30);
-  }
-}

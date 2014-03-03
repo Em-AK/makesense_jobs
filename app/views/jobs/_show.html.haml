@@ -1,6 +1,6 @@
 .row
   .large-16.small-centered.columns
-    %h1= @job.title
+    %h1.catchy= @job.title
     .row
       .medium-12.columns
         %h4
@@ -8,7 +8,7 @@
             POSTED
             = @job.created_at.strftime('%B %d').upcase
         .company
-          %h3= @job.company_name
+          %h3.catchy= @job.company_name
           = link_to @job.company_url, @job.company_url
           %p= @job.location
       .medium-12.columns
