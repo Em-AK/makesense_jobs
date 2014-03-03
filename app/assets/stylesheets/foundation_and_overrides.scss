@@ -29,7 +29,8 @@
 //
 // CUSTOM
 //
-$header-bottom-margin: 1.5rem;
+$header-bottom-margin: .5rem;
+$list-side-margin: rem-calc(20);
 
 // Grid
 
@@ -47,7 +48,7 @@ $total-columns: 24;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
-// $font-smoothing: antialiased;
+$font-smoothing: antialiased;
 
 // We use these to control text direction settings
 // $text-direction: ltr;
@@ -670,7 +671,7 @@ $total-columns: 24;
 // $price-desc-font-size: rem-calc(12);
 // $price-desc-weight: normal;
 // $price-desc-line-height: 1.4;
-// $price-desc-bottom-border: dotted 1px #ddd;
+// $price-desc-bottom-border: dolisttted 1px #ddd;
 
 // We use these to control the list item styles
 // $price-item-color: #333;

@@ -53,3 +53,29 @@
     }
   }
 }
+
+// Job Show
+.company * {
+  margin-bottom: 0;
+  h3 {
+    font-weight: 800;
+  }
+}
+
+.job-logo-small {
+  margin: auto;
+}
+
+.job-logo {
+  margin-top: 1.5rem;
+}
+
+.job-offer {
+  line-height: $paragraph-line-height;
+  p {
+    margin-top: rem-calc(10);
+  }
+  li {
+    margin-left: rem-calc(30);
+  }
+}

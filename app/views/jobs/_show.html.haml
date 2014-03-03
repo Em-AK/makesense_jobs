@@ -7,15 +7,16 @@
           %small
             POSTED
             = @job.created_at.strftime('%B %d').upcase
-        %strong= @job.company_name
-        %p= @job.location
-        = link_to @job.company_url, @job.company_url
+        .company
+          %h3= @job.company_name
+          = link_to @job.company_url, @job.company_url
+          %p= @job.location
       .medium-12.columns
-        = image_tag @job.logo_url, class: 'right show-for-medium-up' if @job.logo?
-        = image_tag @job.logo_url, class: 'job-logo hide-for-medium-up' if @job.logo?
+        = image_tag @job.logo_url, class: 'job-logo right show-for-medium-up' if @job.logo?
+        = image_tag @job.logo_url, class: 'job-logo job-logo-small hide-for-medium-up' if @job.logo?
     %hr
 
-    %p= @job.description.html_safe
+    .job-offer= @job.description.html_safe
     .panel.radius.callout
       %h4= "apply for this job".upcase
       %p= @job.apply.html_safe
