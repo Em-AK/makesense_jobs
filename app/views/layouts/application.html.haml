@@ -1,18 +1,17 @@
 !!!
 %html{ lang: "en" }
   %head
-  %meta{ charset: "utf-8" }/
-  %meta{ name: "viewport", content: "width=device-width, initial-scale: 1.0" }/
-  %meta{ name: "description", content: "Jobs that MakeSense is the best place to find and list jobs that do not meet the requirements of bullshit jobs." }
-  %title
-    = content_for?(:title) ? yield(:title) : "Jobs that MakeSense"
-  = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-  = javascript_include_tag "vendor/modernizr"
-  = javascript_include_tag "metrics"
-  = javascript_include_tag "editor" if action_name == "new"
-  = csrf_meta_tags
+    %meta{ charset: "utf-8" }/
+    %meta{ name: "viewport", content: "width=device-width, initial-scale: 1.0" }/
+    %meta{ name: "description", content: "Jobs that MakeSense is the best place to find and list jobs that do not meet the requirements of bullshit jobs." }
+    %title
+      = content_for?(:title) ? yield(:title) : "Jobs that MakeSense"
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "metrics"
+    = javascript_include_tag "editor" if action_name == "new"
+    = csrf_meta_tags
   %body
-  .container
     = yield
-  = render 'layouts/metrics'
-  = javascript_include_tag "application", "data-turbolinks-track" => true
+    = render 'layouts/metrics'
+    = javascript_include_tag "application", "data-turbolinks-track" => true
