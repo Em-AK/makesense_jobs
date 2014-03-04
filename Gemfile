@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.2'
+gem 'pg'
 
 gem 'sass-rails', '~> 4.0.1'
 gem 'uglifier', '>= 1.3.0'
@@ -11,7 +12,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'foundation-rails'
 gem 'haml'
-gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+# gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'carrierwave'
 gem 'mini_magick'
 gem "fog", "~> 1.3.1"
@@ -21,7 +22,7 @@ gem 'newrelic_rpm'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
+  # gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
 end
 
@@ -39,6 +40,5 @@ group :doc do
 end
 
 group :production, :staging do
-  gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
