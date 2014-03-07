@@ -15,6 +15,10 @@ class Job < ActiveRecord::Base
     end
   end
 
+  def company_clean_url
+    self.company_url[7..-1] if company_url
+  end
+
   private
 
   def add_token

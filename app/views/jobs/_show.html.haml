@@ -9,7 +9,7 @@
             = @job.created_at.strftime('%B %d').upcase
         .company
           %h3.catchy= @job.company_name
-          = link_to @job.company_url, @job.company_url
+          = link_to @job.company_clean_url, @job.company_url
           %p= @job.location
       .medium-12.columns
         = image_tag @job.logo_url, class: 'job-logo right show-for-medium-up' if @job.logo?
