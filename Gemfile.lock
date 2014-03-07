@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 18339ebda67ad5a04efe9c5d257e9f893010b894
+  revision: 739b93bf9d22c89c099cb25a3eeb770726575a13
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -114,7 +114,7 @@ GEM
     formatador (0.2.4)
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
-    foundation-rails (5.1.1.0)
+    foundation-rails (5.2.0.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     grit (2.5.0)
@@ -164,11 +164,11 @@ GEM
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
     minitest (4.7.5)
-    multi_json (1.8.4)
+    multi_json (1.9.0)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.8.0)
-    newrelic_rpm (3.7.2.195)
+    newrelic_rpm (3.7.3.199)
     nokogiri (1.5.11)
     orm_adapter (0.5.0)
     pg (0.17.1)
