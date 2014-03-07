@@ -10,7 +10,7 @@ class Job < ActiveRecord::Base
   before_save :validate_url
 
   def validate_url 
-    unless !self.company_url || self.company_url[0..6] == "http://"
+    unless !self.company_url? || self.company_url[0..6] == "http://"
       self.company_url = "http://#{self.company_url}"
     end
   end
