@@ -19,6 +19,13 @@ class Job < ActiveRecord::Base
     self.company_url[7..-1] if company_url
   end
 
+  scope :published, -> { where(published: true) }
+  scope :displayed, -> { published.where(created_at: ((Time.now - 42.days)..Time.now)) }
+
+  def online?
+    self.published? && self.created_at > Time.now - 42.days
+  end
+
   private
 
   def add_token
