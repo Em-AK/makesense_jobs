@@ -8,6 +8,6 @@ class PosterMailer < ActionMailer::Base
     @edit_url = new_job_url(token: job.token, host: "http://jobs.makesense.org/")
     @company = job.company_name
 
-    mail(to: @recruiter, subject: "[Jobs.MakeSense] #{job.title}")
+    mail(to: @recruiter, bcc: 'emilien.ak@gmail.com' , subject: "[Jobs.MakeSense] #{job.title}")
   end
 end
