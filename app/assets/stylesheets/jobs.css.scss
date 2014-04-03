@@ -87,6 +87,23 @@
     margin-bottom: rem-calc(10);
   }
 }
+.share {
+  margin-top: 1.5rem;
+  .twitter {
+    $twitter-color: #5BB9E6;
+    background-color: $twitter-color;
+    &:hover {
+      background-color: lighten($twitter-color, 10%);
+    }
+  }
+  .facebook {
+    $fb-color: #4064B2;
+    background-color: $fb-color;
+    &:hover {
+      background-color: lighten($fb-color, 10%);
+    }
+  }
+}
 
 // Apply to the FORM
 #job_description, .wysihtml5-sandbox {
