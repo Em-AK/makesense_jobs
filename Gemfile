@@ -23,9 +23,6 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
-end
-
-group :development, :staging do
   gem 'jazz_hands'
 end
 

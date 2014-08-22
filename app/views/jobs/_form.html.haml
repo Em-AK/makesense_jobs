@@ -1,8 +1,8 @@
 .row
-  %p.panel.radius.callout
-    To save your work in progress, you can fill your 
-    %strong email 
-    and push the 
+  %p.alert-box.radius.success
+    To save your work in progress, fill in
+    %strong required* 
+    fields and hit the 
     %strong Preview
     button.
 = form_for( @job, form_params(@job) ) do |f|
@@ -13,14 +13,14 @@
       = f.label :title, "Job title*", class: "hide-for-large-up"
     .large-16.columns.left
       = f.text_field :title, placeholder: "\"Community Developper\" or \"UX Designer\""
-      %p.panel.radius.callout
-        No need to specify the name of your company in the job title. Our app will take care of it !
+      %p.alert-box.radius.success
+        No need to specify the name of your company in the job title. The robot will take care of it !
   .row
     .large-4.columns
       = f.label :location, "Location", class: "inline show-for-large-up"
       = f.label :location, "Location", class: "hide-for-large-up"
     .large-16.columns.left
-      = f.text_field :location, placeholder: "\"Lille, France\" or \"London, UK\""
+      = f.text_field :location, placeholder: "\"Lille, France\" or \"London, UK\" or \"Remote\""
   .row
     .large-24.columns
       = f.label :description, "Job description"
@@ -58,6 +58,6 @@
       = f.label :email, "Email*", class: "hide-for-large-up"
     .large-16.columns.left
       = f.text_field :email, placeholder: "Your email"
-      %p.panel.radius.callout Your email will be kept private. You will receive a message with a link to edit your ad.
+      %p.alert-box.radius.success Your email will be kept private. You will soon receive a message with a link to edit your ad.
     
   = f.submit value: "Preview your ad", class: "button radius"
