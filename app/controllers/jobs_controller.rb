@@ -2,7 +2,8 @@ class JobsController < ApplicationController
   
   def index
     # display only published jobs created less than 42 days ago
-    @jobs = Job.displayed
+    @jobs = Job.no_bullshit.sort{ |a,b| b.created_at <=> a.created_at }
+    @wannabe = (Job.displayed - @jobs).sort{ |a,b| b.created_at <=> a.created_at }
   end
 
   def show

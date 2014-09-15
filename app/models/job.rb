@@ -21,6 +21,7 @@ class Job < ActiveRecord::Base
 
   scope :published, -> { where(published: true) }
   scope :displayed, -> { published.where(created_at: ((Time.now - 42.days)..Time.now)) }
+  scope :no_bullshit, -> { displayed.where(highlighted: true) }
 
   def online?
     self.published? && self.created_at > Time.now - 42.days

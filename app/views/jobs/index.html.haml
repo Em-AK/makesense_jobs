@@ -1,27 +1,28 @@
 = render 'header'
-%h2.text-center.tagline Say no to bullshit jobs!
+%h2.text-center.tagline No bullshit job$
 .row
   .large-22.small-centered.columns.job-list
-    - @jobs.sort!{ |a,b| b.created_at <=> a.created_at }
     - @jobs.each do |job|
-      - if job.highlighted?
-        .row.highlighted
-          %p.small-20.medium-21.columns
-            %strong= job.company_name
-            = link_to job.title, job_path(job)
-            - unless job.location.empty?
-              in 
-              = "#{job.location}"
-          %p.small-4.medium-3.columns.text-right.date
-            = job.created_at.strftime('%b %d').capitalize
-      - else
-        .row
-          %p.small-20.medium-21.columns
-            %strong= job.company_name
-            = link_to job.title, job_path(job)
-            - unless job.location.empty?
-              in 
-              = "#{job.location}"
-          %p.small-4.medium-3.columns.text-right.date
-            = job.created_at.strftime('%b %d').capitalize
+      .row.highlighted
+        %p.small-20.medium-21.columns
+          %strong= job.company_name
+          = link_to job.title, job_path(job)
+          - unless job.location.empty?
+            in
+            = "#{job.location}"
+        %p.small-4.medium-3.columns.text-right.date
+          = job.created_at.strftime('%b %d').capitalize
+%h2.text-center.tagline Wannabe jobs
+.row
+  .large-22.small-centered.columns.job-list
+    - @wannabe.each do |job|
+      .row
+        %p.small-20.medium-21.columns
+          %strong= job.company_name
+          = link_to job.title, job_path(job)
+          - unless job.location.empty?
+            in
+            = "#{job.location}"
+        %p.small-4.medium-3.columns.text-right.date
+          = job.created_at.strftime('%b %d').capitalize
 = render 'footer'
