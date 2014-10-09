@@ -22,10 +22,4 @@
     .panel.radius.callout
       %h4= "apply for this job".upcase
       %p= @job.apply.html_safe
-    .share.text-center.medium-18.medium-centered.columns
-      %h6= 'Sharing is caring'.upcase
-      .medium-12.columns
-        = link_to "Tweet this job", "http://twitter.com/home?status=#{@job.company_name} is hiring a #{@job.title} at #{job_url @job}", class: 'button twitter expand small radius'
-      .medium-12.columns
-        = link_to "Share it with a friend", "http://www.facebook.com/sharer.php?u=#{job_url @job}&t=#{@job.title}", class: 'button facebook expand small radius'
-      = mail_to "","or the email way", body: "#{@job.company_name} is hiring a #{@job.title} at #{job_url @job}", subject: "#{@job.title}"
+
