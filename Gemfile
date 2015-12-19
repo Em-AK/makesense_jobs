@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.2.3'
 
 gem 'rails', '4.0.2'
 gem 'pg'
@@ -22,8 +22,9 @@ gem 'newrelic_rpm'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :development, :test do
-  gem 'rspec-rails', '2.13.1'
-  gem 'jazz_hands'
+  gem 'dotenv-rails'
+  gem 'pry-byebug'
+  gem 'rspec-rails'
 end
 
 group :test do
