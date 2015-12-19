@@ -3,13 +3,19 @@
     .medium-8.columns.medium-offset-4.text-right
       %h4 No job for you today?
       %p
-        Sharpen your skills by solving real world challenges on 
-        %a{ href: "http://makesense.org"} makesense.org
+        Sharpen your skills by solving real world challenges on
+        %a{ href: 'http://makesense.org' } makesense.org
     .medium-12.columns.left
-      %a{ href: "http://makesense.org" }
-        %img.logo{ src: "/makesense_jobs.png", class: "th radius"}
+      %a{ href: 'http://makesense.org' }
+        %img.logo{ src: '/makesense_jobs.png', class: 'th radius' }
   .row
-    .medium-6.columns.medium-centered.text-center
-      = link_to "Challenge accepted!", "http://makesense.org", class: 'button radius success'
+    .medium-7.columns.medium-centered.text-center
+      = link_to 'Challenge accepted!', 'http://makesense.org', class: 'button radius success'
       %hr
-      = mail_to "emilien.ak@gmail.com", "Contact / Feedback", class: 'contact'
+      = link_to 'Source code', 'https://github.com/Em-AK/makesense_jobs', target: '_blank'
+      under AGPLv3.0
+      %br
+      \_/\_
+      %br
+      = mail_to 'emilien.ak@gmail.com', 'Contact & Feedback', class: 'contact'
+
