@@ -18,10 +18,8 @@
         = image_tag @job.logo_url, class: 'job-logo job-logo-small hide-for-medium-up' if @job.logo?
     %hr
 
-    // TODO - fiw security issue
     .job-offer= sanitize @job.description
     .panel.radius.callout
       %h4= "apply for this job".upcase
-      // TODO - fiw security issue
       %p= sanitize @job.apply
 
