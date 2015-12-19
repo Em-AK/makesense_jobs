@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Em-AK/makesense_jobs.png?label=ready&title=Ready)](https://waffle.io/Em-AK/makesense_jobs)
 ## Jobs that MakeSense !
 by emilien.ak@gmail.com
 
