@@ -12,7 +12,7 @@ permit_params :title, :description, :apply, :location, :company_name, :company_u
     column :published
     column :highlighted
     column :updated_at
-    default_actions
+    actions
   end
 
   #GET /admin/jobs/:id

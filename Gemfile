@@ -5,7 +5,7 @@ gem 'rails', '4.0.2'
 gem 'pg'
 gem 'puma'
 
-gem 'sass-rails', '~> 4.0.1'
+gem 'sass-rails', '~> 5.0.1'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.1'
 gem 'jquery-rails'
@@ -20,6 +20,7 @@ gem 'actionview-encoded_mail_to'
 gem 'wysihtml5x-rails'
 gem 'newrelic_rpm'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
 
 group :development, :test do
   gem 'dotenv-rails'
