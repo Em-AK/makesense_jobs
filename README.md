@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Em-AK/makesense_jobs.png?label=ready&title=Ready)](https://waffle.io/Em-AK/makesense_jobs)
 ## Jobs that MakeSense !
 
 [![Join the chat at https://gitter.im/Em-AK/makesense_jobs](https://badges.gitter.im/Em-AK/makesense_jobs.svg)](https://gitter.im/Em-AK/makesense_jobs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
