@@ -1,4 +1,6 @@
 class Job < ActiveRecord::Base
+  THE_RIGHT_PERIOD = 42.days
+
   validates :email, presence: true
   validates :company_name, presence: true
   validates :title, presence: true
@@ -9,7 +11,7 @@ class Job < ActiveRecord::Base
   before_create :add_token
   before_save :validate_url
 
-  def validate_url 
+  def validate_url
     unless !self.company_url? || self.company_url[0..6] == "http://"
       self.company_url = "http://#{self.company_url}"
     end
@@ -20,11 +22,11 @@ class Job < ActiveRecord::Base
   end
 
   scope :published, -> { where(published: true) }
-  scope :displayed, -> { published.where(created_at: ((Time.now - 42.days)..Time.now)) }
+  scope :displayed, -> { published.where(created_at: ((Time.now - THE_RIGHT_PERIOD)..Time.now)) }
   scope :no_bullshit, -> { displayed.where(highlighted: true) }
 
   def online?
-    self.published? && self.created_at > Time.now - 42.days
+    self.published? && self.created_at > Time.now - THE_RIGHT_PERIOD
   end
 
   private
