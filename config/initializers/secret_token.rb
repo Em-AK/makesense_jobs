@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Makesensejobs::Application.config.secret_key_base = 'd5338f76bacd57bd0b5561783a8a0246859291303bee273856455ae28c3c762c153dfeaf0e9733ef9b340db256554986b6bf730a065581fd947e8cc01d6abf61'
+Makesensejobs::Application.config.secret_key_base = ENV['APP_SECRET']

@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  
+
   def index
     # display only published jobs created less than 42 days ago
     @jobs = Job.no_bullshit.sort{ |a,b| b.created_at <=> a.created_at }
@@ -17,10 +17,10 @@ class JobsController < ApplicationController
   def new
     if params[:token]
       @job = Job.find_by_token params[:token]
-      session[:job_id] = @job.id
+      session[:job_token] = @job.token
     else
       @job = Job.new
-      session[:job_id] = nil
+      session[:job_token] = nil
     end
   end
 
@@ -28,7 +28,7 @@ class JobsController < ApplicationController
     @job = Job.new job_params
     if @job.save
       PosterMailer.new_job_email(@job).deliver
-      session[:job_id] = @job.id
+      session[:job_token] = @job.token
       redirect_to preview_job_path
     else
       render action: 'new'
@@ -49,8 +49,9 @@ class JobsController < ApplicationController
   end
 
   def preview
-    if session[:job_id]
-      @job = Job.find session[:job_id]
+    if session[:job_token]
+      @job = Job.find_by_token session[:job_token]
+      session[:job_token] = nil
     else
       redirect_to new_job_path
     end
@@ -60,9 +61,9 @@ class JobsController < ApplicationController
     @job = Job.find_by_token params[:token]
   end
 
-
   private
-    def job_params
-      params.require(:job).permit(:title, :description, :apply, :location, :email, :company_name, :company_url, :published, :logo )
-    end
+
+  def job_params
+    params.require(:job).permit(:title, :description, :apply, :location, :email, :company_name, :company_url, :published, :logo )
+  end
 end

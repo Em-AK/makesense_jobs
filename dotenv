@@ -1,0 +1,13 @@
+# Make a copy of this file into .env and add your variables
+
+# generate the following codes with the command `rake secret`
+APP_SECRET:
+DEVISE_SECRET:
+
+AWS_KEY_ID:
+AWS_SECRET_KEY:
+AWS_REGION:
+
+SENDGRID_USERNAME:
+SENDGRID_PASSWORD:
+
