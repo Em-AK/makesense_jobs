@@ -8,7 +8,7 @@
 
 ## Why
 
-Jobs that MakeSense wants to:
+Jobs that MakeSense wants to :
 
 * Give the talented changemakers out there the job opportunities they deserve
 * Help organisations who do care about our Causes to find the talents they need
@@ -19,11 +19,11 @@ Read more on the 'About' page (To be written - see issue #14)
 ## Setup development environnement
 
 If you worked with rails applications before, it should be easy for you. If you are
-stuck at any point in the process please [come to the chatroom](https://gitter.im/Em-AK/makesense_jobs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) to get some help.
+stuck at any point in the process please [come to the chatroom](https://gitter.im/Em-AK/makesense_jobs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) to get some help
 
 ### Dependencies
 
-Your machine must have the following installed:
+Your machine must have the following installed :
 
 * postgresql
 * nodejs (for assets compilation)
@@ -34,7 +34,7 @@ Your machine must have the following installed:
 ### Install gem dependencies
 
 1. Clone the project from github
-2. cd into `makesense_jobs` the app root directory
+2. cd into the `makesense_jobs` directory
 3. run `bundle install`
 
 It can take a few minutes to install all the gems if you do it for the first time.
