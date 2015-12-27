@@ -64,13 +64,13 @@ rake db:setup
 ### Ignite
 
 Now you should be ready to launch the local server with `rails server`, and see
-the app running on http://localhost:3000
+the app running on <http://localhost:3000>
 
 ## Deploy to production-like environment
 
 The app is ready to run smoothly on dokku or heroku
 
-1. configure postgresql database and set DATABASE_URL into the env
+1. configure postgresql database and set `DATABASE_URL` into the env
 2. configure environment variables
 3. push on the host repo to deploy via the buildpacks
 
@@ -90,7 +90,7 @@ chatroom](https://gitter.im/Em-AK/makesense_jobs?utm_source=badge&utm_medium=bad
 
 ## License
 
-The code is distributed under the [GNU
+Copyright Emilien Ah-Kiem - The code is free software distributed under the [GNU
 AGPLv3](https://github.com/Em-AK/makesense_jobs/blob/master/LICENSE),
-understand [what you can do with it]()
+understand [what you can do with it](http://choosealicense.com/licenses/agpl-3.0/)!
 
