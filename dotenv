@@ -4,10 +4,12 @@
 APP_SECRET:
 DEVISE_SECRET:
 
+# Create a bucket on Amazon S3 (object storage service) to store companies logo
 AWS_KEY_ID:
 AWS_SECRET_KEY:
 AWS_REGION:
 
+# get a free sendgrid account at https://sendgrid.com/
 SENDGRID_USERNAME:
 SENDGRID_PASSWORD:
 
