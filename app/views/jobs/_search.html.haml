@@ -1,0 +1,9 @@
+.form_search
+  = form_tag(jobs_path, :method => "get", id: "search-form") do
+    = text_field_tag :search, params[:search], placeholder: "Search jobs"
+    = submit_tag "Search"
+    - if @jobs_search.present?
+      = render 'jobs/search_results'
+    - else
+      %p
+        There are no jobs containing the term(s) #{params[:search]}
