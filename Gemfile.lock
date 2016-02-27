@@ -411,5 +411,8 @@ DEPENDENCIES
   web-console (~> 2.0)
   wysihtml5x-rails
 
+RUBY VERSION
+   ruby 2.2.3p173
+
 BUNDLED WITH
-   1.10.6
+   1.12.0.pre.1

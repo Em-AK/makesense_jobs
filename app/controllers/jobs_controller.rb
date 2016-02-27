@@ -4,6 +4,7 @@ class JobsController < ApplicationController
     # display only published jobs created less than 42 days ago
     @jobs = Job.no_bullshit.sort{ |a,b| b.created_at <=> a.created_at }
     @wannabe = (Job.displayed - @jobs).sort{ |a,b| b.created_at <=> a.created_at }
+    @subscriber = Subscriber.new
   end
 
   def show
@@ -59,6 +60,14 @@ class JobsController < ApplicationController
 
   def publish
     @job = Job.find_by_token params[:token]
+  end
+
+   def send_email_to_subscribers
+    @job = Job.where(published: true)
+    @subscribers = Subscriber.all
+    @subscribers.uniq.map do |recipient|
+      RecieverJobMailer.notify_subscriber_email(recipient, @job).deliver
+    end
   end
 
   private

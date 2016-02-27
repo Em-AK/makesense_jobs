@@ -17,6 +17,10 @@ Makesensejobs::Application.routes.draw do
   post 'jobs' => 'jobs#create'
   patch 'jobs/new' => 'jobs#update'
 
+  #subscribers routes
+  resources :subscribers
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
