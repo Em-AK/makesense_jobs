@@ -20,6 +20,10 @@ Makesensejobs::Application.routes.draw do
   #subscriber path
   resources :subscribers
 
+  #subscribers routes
+  resources :subscribers
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

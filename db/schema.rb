@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160306164233) do
+=======
+ActiveRecord::Schema.define(version: 20160227041228) do
+>>>>>>> be4db0a61fabcf6929e041a49a99399ac6cd2e96
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +74,7 @@ ActiveRecord::Schema.define(version: 20160306164233) do
   add_index "jobs", ["recruiter_id"], name: "index_jobs_on_recruiter_id", using: :btree
   add_index "jobs", ["token"], name: "index_jobs_on_token", using: :btree
 
+<<<<<<< HEAD
   create_table "recruiters", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -88,6 +93,8 @@ ActiveRecord::Schema.define(version: 20160306164233) do
   add_index "recruiters", ["email"], name: "index_recruiters_on_email", unique: true, using: :btree
   add_index "recruiters", ["reset_password_token"], name: "index_recruiters_on_reset_password_token", unique: true, using: :btree
 
+=======
+>>>>>>> be4db0a61fabcf6929e041a49a99399ac6cd2e96
   create_table "subscribers", force: :cascade do |t|
     t.string   "email"
     t.integer  "job_id"
@@ -97,5 +104,8 @@ ActiveRecord::Schema.define(version: 20160306164233) do
 
   add_index "subscribers", ["job_id"], name: "index_subscribers_on_job_id", using: :btree
 
+<<<<<<< HEAD
   add_foreign_key "jobs", "recruiters"
+=======
+>>>>>>> be4db0a61fabcf6929e041a49a99399ac6cd2e96
 end
