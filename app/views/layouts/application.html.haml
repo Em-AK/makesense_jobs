@@ -12,6 +12,7 @@
     = javascript_include_tag "editor" if action_name == "new"
     = csrf_meta_tags
   %body
+    = render 'layouts/navbar'
     = yield
     = render 'layouts/metrics'
     = javascript_include_tag "application", "data-turbolinks-track" => true

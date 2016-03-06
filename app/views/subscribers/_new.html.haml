@@ -1,0 +1,4 @@
+.new_subscriber.medium-12.columns
+  = form_for(@subscriber) do |t|
+    = t.email_field :email, placeholder: 'email@example.com'
+    = t.submit "subscribe", id: 'subscriber_input', class: 'button'

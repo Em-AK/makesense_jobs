@@ -1,9 +1,22 @@
 class JobsController < ApplicationController
 
+  after_action :send_email_to_subscribers, only: [:publish]
+
   def index
     # display only published jobs created less than 42 days ago
+    @subscriber = Subscriber.new
     @jobs = Job.no_bullshit.sort{ |a,b| b.created_at <=> a.created_at }
     @wannabe = (Job.displayed - @jobs).sort{ |a,b| b.created_at <=> a.created_at }
+<<<<<<< HEAD
+    @jobs_search = @jobs + @wannabe
+    if params[:search]
+      @jobs_search = Job.search(params[:search]).order("created_at DESC")
+    else
+      @jobs_search = Job.all.order('created_at DESC')
+    end
+=======
+    @subscriber = Subscriber.new
+>>>>>>> be4db0a61fabcf6929e041a49a99399ac6cd2e96
   end
 
   def show
@@ -59,6 +72,18 @@ class JobsController < ApplicationController
 
   def publish
     @job = Job.find_by_token params[:token]
+  end
+
+<<<<<<< HEAD
+  def send_email_to_subscribers
+=======
+   def send_email_to_subscribers
+>>>>>>> be4db0a61fabcf6929e041a49a99399ac6cd2e96
+    @job = Job.where(published: true)
+    @subscribers = Subscriber.all
+    @subscribers.uniq.map do |recipient|
+      RecieverJobMailer.notify_subscriber_email(recipient, @job).deliver
+    end
   end
 
   private

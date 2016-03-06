@@ -1,6 +1,8 @@
 class Job < ActiveRecord::Base
   THE_RIGHT_PERIOD = 42.days
 
+  has_many :subscribers
+
   validates :email, presence: true
   validates :company_name, presence: true
   validates :title, presence: true
@@ -27,6 +29,10 @@ class Job < ActiveRecord::Base
 
   def online?
     self.published? && self.created_at > Time.now - THE_RIGHT_PERIOD
+  end
+
+  def self.search(search)
+    where("title LIKE ?", "%#{search}%") 
   end
 
   private

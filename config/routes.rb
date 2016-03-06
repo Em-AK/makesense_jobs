@@ -1,4 +1,5 @@
 Makesensejobs::Application.routes.draw do
+  devise_for :recruiters, controllers: { registrations: 'recruiters/registrations', passwords: 'recruiters/passwords' }
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,6 +17,12 @@ Makesensejobs::Application.routes.draw do
   get 'jobs/:id' => 'jobs#show', as: :job
   post 'jobs' => 'jobs#create'
   patch 'jobs/new' => 'jobs#update'
+  #subscriber path
+  resources :subscribers
+
+  #subscribers routes
+  resources :subscribers
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
