@@ -21,7 +21,7 @@ gem 'wysihtml5x-rails'
 gem 'newrelic_rpm'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
-
+gem "haml-rails", "~> 0.9"
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
