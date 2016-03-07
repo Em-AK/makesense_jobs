@@ -1,10 +1,15 @@
 .row.bar
-  .large-12.columns
-    %a.root{ href: "#{root_url}"}
-      Jobs
-      %small that
-      MakeSense
+	.large-12.columns
+		%a.root{ href: "#{root_url}"}
+			Jobs
+			%small that
+			MakeSense
 
-  .large-12.columns
-    = link_to "Post a Job", new_job_path, class: "button radius right", "data-no-turbolink" => "true"
-  %hr
+	.large-12.columns
+		- if recruiter_signed_in?
+			= link_to "My space", recruiter_space_path(current_recruiter), class: "space"
+			= link_to "Sign_out", destroy_recruiter_session_path, method: :delete, class: "Sign"
+		- else
+			= link_to "Sign_up", new_recruiter_session_path, class: "Sign"
+		= link_to "Post a Job", new_job_path, class: "button radius right", "data-no-turbolink" => "true"
+	%hr
