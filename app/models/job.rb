@@ -1,7 +1,7 @@
 class Job < ActiveRecord::Base
 
   THE_RIGHT_PERIOD = 42.days
-
+  belongs_to :recruiter
   validates :email, presence: true
   validates :company_name, presence: true
   validates :title, presence: true
