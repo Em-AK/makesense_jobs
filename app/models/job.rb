@@ -5,6 +5,7 @@ class Job < ActiveRecord::Base
   validates :company_name, presence: true
   validates :title, presence: true
   validates :apply, presence: true
+  validates :company_url, format: URI::regexp(%w(http https))
 
   mount_uploader :logo, LogoUploader
 
