@@ -4,6 +4,7 @@
 [![Join the chat at https://gitter.im/Em-AK/makesense_jobs](https://badges.gitter.im/Em-AK/makesense_jobs.svg)](https://gitter.im/Em-AK/makesense_jobs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Code Climate](https://codeclimate.com/github/Em-AK/makesense_jobs/badges/gpa.svg)](https://codeclimate.com/github/Em-AK/makesense_jobs)
 [![security](https://hakiri.io/github/Em-AK/makesense_jobs/master.svg)](https://hakiri.io/github/Em-AK/makesense_jobs/master)
+[![Build Status](https://travis-ci.org/Em-AK/makesense_jobs.svg?branch=master)](https://travis-ci.org/Em-AK/makesense_jobs)
 
 ## Why
 
