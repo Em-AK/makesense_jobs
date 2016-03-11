@@ -1,12 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe Job do
+RSpec.describe Job, type: :model do
 
   describe 'validations' do
-
-    it 'should have a title' do
-      job = build :job, title: nil
-      expect(job).to_not be_valid
-    end
+    it { should validate_presence_of :title }
+    it { should validate_presence_of :email }
+    it { should validate_presence_of :apply }
+    it { should validate_presence_of :company_name }
   end
 end
