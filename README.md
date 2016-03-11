@@ -2,7 +2,6 @@
 
 [![Stories in Ready](https://badge.waffle.io/Em-AK/makesense_jobs.png?label=ready&title=Ready)](https://waffle.io/Em-AK/makesense_jobs)
 [![Join the chat at https://gitter.im/Em-AK/makesense_jobs](https://badges.gitter.im/Em-AK/makesense_jobs.svg)](https://gitter.im/Em-AK/makesense_jobs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![Code Climate](https://codeclimate.com/github/Em-AK/makesense_jobs/badges/gpa.svg)](https://codeclimate.com/github/Em-AK/makesense_jobs)
 [![security](https://hakiri.io/github/Em-AK/makesense_jobs/master.svg)](https://hakiri.io/github/Em-AK/makesense_jobs/master)
 
@@ -65,6 +64,16 @@ rake db:setup
 
 Now you should be ready to launch the local server with `rails server`, and see
 the app running on <http://localhost:3000>
+
+### Run tests
+
+Manually
+
+    rspec
+
+Automated with [guard](https://github.com/guard/guard)
+
+    bundle exec guard
 
 ## Deploy to production-like environment
 

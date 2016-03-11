@@ -24,6 +24,9 @@ gem 'devise'
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'guard-bundler', require: false
 end
 
 group :development, :test do
