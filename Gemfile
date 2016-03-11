@@ -24,17 +24,23 @@ gem 'devise'
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'guard-bundler', require: false
 end
 
 group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-byebug'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara'
+  gem 'shoulda-matchers'
 end
 
 group :production, :staging do
