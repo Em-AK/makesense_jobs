@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5'
+gem 'rails', '~> 4.2.5'
 gem 'pg'
 gem 'puma'
 
@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 4.0.1'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.0'
 gem 'haml'
 gem 'carrierwave'
 gem 'mini_magick'
