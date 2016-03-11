@@ -20,3 +20,4 @@ doc/
 .idea
 .secret
 .env*
+spec/examples.txt
