@@ -28,7 +28,7 @@ Your machine must have the following installed :
 * postgresql
 * nodejs (for assets compilation)
 * ImageMagick
-* ruby version 2.2.3
+* ruby version 2.3.0
 * bundler: `gem install bundler`
 
 ### Install gem dependencies
