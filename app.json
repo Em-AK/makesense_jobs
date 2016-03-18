@@ -10,7 +10,5 @@
     "heroku-postgresql",
     "sendgrid"
   ],
-  "buildpacks": [
-
-  ]
+  "buildpacks": []
 }
