@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
 
+  before_action :authenticate_recruiter!, except: :index
   def index
     # display only published jobs created less than 42 days ago
     @jobs = Job.no_bullshit.sort{ |a,b| b.created_at <=> a.created_at }
@@ -25,7 +26,7 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.new job_params
+    @job = current_recruiter.jobs.new job_params
     if @job.save
       PosterMailer.new_job_email(@job).deliver
       session[:job_token] = @job.token
@@ -59,6 +60,10 @@ class JobsController < ApplicationController
 
   def publish
     @job = Job.find_by_token params[:token]
+  end
+
+  def recruiter_space
+    @jobs = Job.where(recruiter_id: current_recruiter).all
   end
 
   private

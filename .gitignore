@@ -20,3 +20,4 @@ doc/
 .secret
 .env*
 spec/examples.txt
+database.yml

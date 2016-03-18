@@ -1,0 +1,37 @@
+.row.bar
+	.large-12.columns
+		%a.root{ href: "#{root_url}"}
+			Jobs
+			%small That
+			makesense
+	.large-12.columns
+		%h6= "#{current_recruiter.email}" 
+		%ul.tabs{"data-tab" => "", :role => "tablist"}
+			%li.tab-title.active{:role => "presentation"}
+				%a{"aria-controls" => "panel2-1", "aria-selected" => "true", :href => "#panel2-1", :role => "tab", :tabindex => "0"}Job 
+				= "#{count_recruiter_job(current_recruiter)}"
+			%li.tab-title{:role => "presentation"}
+				%a{"aria-controls" => "panel2-2", "aria-selected" => "false", :href => "#panel2-2", :role => "tab", :tabindex => "0"} Tab 2
+			%li.tab-title{:role => "presentation"}
+				%a{"aria-controls" => "panel2-3", "aria-selected" => "false", :href => "#panel2-3", :role => "tab", :tabindex => "0"} Tab 3
+			%li.tab-title{:role => "presentation"}
+				%a{"aria-controls" => "panel2-4", "aria-selected" => "false", :href => "#panel2-4", :role => "tab", :tabindex => "0"} Tab 4
+		.tabs-content
+			%section#panel2-1.content.active{"aria-hidden" => "true", :role => "tabpanel"}
+				- @jobs.each do |job|
+					.row.highlighted
+						%p.small-20.medium-21.columns
+							%strong= job.company_name
+							= link_to job.title, job_path(job)
+							- unless job.location.empty?
+								in
+							= "#{job.location}"
+						%p.small-4.medium-3.columns.text-right.date
+							= job.created_at.strftime('%b %d').capitalize
+						%hr
+			%section#panel2-2.content{"aria-hidden" => "true", :role => "tabpanel"}
+				%h2 Second panel content goes here...
+			%section#panel2-3.content{"aria-hidden" => "true", :role => "tabpanel"}
+				%h2 Third panel content goes here...
+			%section#panel2-4.content{"aria-hidden" => "true", :role => "tabpanel"}
+				œ%h2 Fourth panel content goes here...
