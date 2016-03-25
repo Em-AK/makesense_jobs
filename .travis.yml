@@ -2,7 +2,9 @@ language: ruby
 rvm:
   - 2.3.0
 cache: bundler
-script: bundle exec rspec
+script:
+  - bin/rake db:migrate RAILS_ENV=test
+  - bundle exec rspec
 bundler_args: --without production
 services:
     - postgresql
