@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20140304022044) do
     t.string "name"
     t.string "website"
     t.string "logo"
-    t.string "description"
+    t.string "mission"
   end
 
 end
