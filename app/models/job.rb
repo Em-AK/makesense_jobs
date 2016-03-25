@@ -24,7 +24,9 @@ class Job < ActiveRecord::Base
   end
 
   def company_clean_url
-    company_url.match(URI::regexp(%w(http https)))[4] if company_url
+    if company_url
+      company_url.match(URI::regexp(%w(http https)))[4..7].compact.join
+    end
   end
 
   def online?
