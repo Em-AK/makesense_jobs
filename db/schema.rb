@@ -68,4 +68,9 @@ ActiveRecord::Schema.define(version: 20140304022044) do
   add_index "jobs", ["published"], name: "index_jobs_on_published", using: :btree
   add_index "jobs", ["token"], name: "index_jobs_on_token", using: :btree
 
+  create_table "organisations", force: :cascade do |t|
+    t.string "name"
+    t.string "website"
+  end
+
 end
