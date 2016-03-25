@@ -1,6 +1,6 @@
 ActiveAdmin.register Organisation do
 
-permit_params :name, :website
+permit_params :name, :website, :logo, :description
 
   # GET /admin/organisations
   index do
@@ -15,6 +15,11 @@ permit_params :name, :website
       row :id
       row :name
       row :website
+      row :description
+      row :logo do
+        image = image_tag org.logo.url
+        link_to image, org.logo.url if org.logo.url
+      end
     end
   end
 end
