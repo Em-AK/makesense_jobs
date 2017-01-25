@@ -101,6 +101,6 @@ chatroom](https://gitter.im/Em-AK/makesense_jobs?utm_source=badge&utm_medium=bad
 ## License
 
 Copyright Emilien Ah-Kiem - The code is free software distributed under the [GNU
-AGPLv3](https://github.com/Em-AK/makesense_jobs/blob/master/LICENSE),
+AGPLv3](https://github.com/makesense/makesense_jobs/blob/master/LICENSE),
 understand [what you can do with it](http://choosealicense.com/licenses/agpl-3.0/)!
 
