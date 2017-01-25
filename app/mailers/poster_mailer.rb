@@ -1,5 +1,5 @@
 class PosterMailer < ActionMailer::Base
-  default from: "join@makesense.org"
+  default from: "jobs@makesense.org"
 
   def new_job_email(job)
     @recruiter = job.email
@@ -8,6 +8,6 @@ class PosterMailer < ActionMailer::Base
     @edit_url = new_job_url(token: job.token, host: "http://jobs.makesense.org")
     @company = job.company_name
 
-    mail(to: @recruiter, bcc: 'join@makesense.org' , subject: "[Jobs.MakeSense] #{job.title}")
+    mail(to: @recruiter, bcc: 'jobs@makesense.org' , subject: "[Jobs.MakeSense] #{job.title}")
   end
 end
