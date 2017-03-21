@@ -1,0 +1,3 @@
+%ul
+  - @jobs_search.each do |job|
+    %li= link_to job.title, :action => 'show', :id => job.id 
