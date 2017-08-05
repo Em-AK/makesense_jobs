@@ -47,6 +47,8 @@ won't be commited and published on github)
 
 Learn more about [dotenv](https://github.com/bkeepers/dotenv)
 
+For a rapid setup, remove .local in database.local.yml and carrierwave.local.rb and replace
+
 ### Create postgresql databases
 
 Make a copy of `config/database.yml.sample` into `config/database.yml` and customize
