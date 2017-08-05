@@ -1,4 +1,13 @@
 = render 'header'
+%br
+=form_tag('/', method: :get) do
+  .row
+    .small-24.medium-16.columns.medium-offset-4
+      .row.collapse
+        .small-17.columns.medium-19
+          =text_field_tag 'search',nil, placeholder: 'Search for a job'
+        .small-6.columns.medium-4
+          =button_tag 'Search' , class: 'button radius postfix'
 %h2.text-center.tagline No bullshit jobs. Just impact.
 .row
   .large-22.small-centered.columns.job-list
