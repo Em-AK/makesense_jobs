@@ -5,7 +5,7 @@ class JobsController < ApplicationController
     @jobs = Job.displayed
     if params[:search]
       text = "%#{params[:search]}%"
-      @jobs = @jobs.where('jobs.description ILIKE ? OR jobs.title ILIKE ?  OR jobs.company_name ILIKE ? OR jobs.location ILIKE ?', text, text, text, text )
+      @jobs = @jobs.where('unaccent(jobs.description) ILIKE unaccent(?) OR unaccent(jobs.title) ILIKE unaccent(?)  OR unaccent(jobs.company_name) ILIKE unaccent(?) OR unaccent(jobs.location) ILIKE unaccent(?)', text, text, text, text )
     end
     @jobs = @jobs.sort{ |a,b| b.created_at <=> a.created_at }
   end
