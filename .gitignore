@@ -19,4 +19,5 @@ doc/
 .idea
 .secret
 .env*
+*local*
 spec/examples.txt

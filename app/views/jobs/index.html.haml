@@ -1,22 +1,18 @@
 = render 'header'
-%h2.text-center.tagline No bullshit job$
+%br
+=form_tag('/', method: :get) do
+  .row
+    .small-24.medium-16.columns.medium-offset-4
+      .row.collapse
+        .small-17.columns.medium-19
+          =text_field_tag 'search',nil, placeholder: 'Search for a job (keyword, country, city, ...)'
+        .small-6.columns.medium-4
+          =button_tag 'Search' , class: 'button radius postfix'
+%h2.text-center.tagline No bullshit jobs. Just impact.
 .row
   .large-22.small-centered.columns.job-list
     - @jobs.each do |job|
       .row.highlighted
-        %p.small-20.medium-21.columns
-          %strong= job.company_name
-          = link_to job.title, job_path(job)
-          - unless job.location.empty?
-            in
-            = "#{job.location}"
-        %p.small-4.medium-3.columns.text-right.date
-          = job.created_at.strftime('%b %d').capitalize
-%h2.text-center.tagline Wannabe jobs
-.row
-  .large-22.small-centered.columns.job-list
-    - @wannabe.each do |job|
-      .row
         %p.small-20.medium-21.columns
           %strong= job.company_name
           = link_to job.title, job_path(job)

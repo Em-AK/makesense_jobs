@@ -1,0 +1,14 @@
+config: &config
+  adapter: postgresql
+  encoding: unicode
+  username: antoine
+  pool: 5
+
+development:
+  database: mksjobs_dev
+  <<: *config
+
+test:
+  database: mksjobs_test
+  <<: *config
+

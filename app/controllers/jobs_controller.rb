@@ -2,8 +2,12 @@ class JobsController < ApplicationController
 
   def index
     # display only published jobs created less than 42 days ago
-    @jobs = Job.no_bullshit.sort{ |a,b| b.created_at <=> a.created_at }
-    @wannabe = (Job.displayed - @jobs).sort{ |a,b| b.created_at <=> a.created_at }
+    @jobs = Job.displayed
+    if params[:search]
+      text = "%#{params[:search]}%"
+      @jobs = @jobs.where('unaccent(jobs.description) ILIKE unaccent(?) OR unaccent(jobs.title) ILIKE unaccent(?)  OR unaccent(jobs.company_name) ILIKE unaccent(?) OR unaccent(jobs.location) ILIKE unaccent(?)', text, text, text, text )
+    end
+    @jobs = @jobs.sort{ |a,b| b.created_at <=> a.created_at }
   end
 
   def show
